@@ -88,8 +88,15 @@ MakeYourOwnPizza.prototype.addToppings = function(topping) {
   } 
 }
 
+function attachContactListeners() {
+  $("input[type='checkbox']").on("click", function() {
+    pizza1.toppings.push($("input:checkbox[name=toppings]:checked").val())
+    console.log("work?");
+  });
+}
+
 $(document).ready(function() {
-  
+  attachContactListeners();
 });
 
 /* Objectives of website --
