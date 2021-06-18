@@ -1,9 +1,7 @@
-
-let pizza1 = new MakeYourOwnPizza();
-function MakeYourOwnPizza() {
-  this.toppings = [];
+function MakeYourOwnPizza(toppings, size) {
+  this.toppings = toppings;
   this.extra = [];
-  this.size = "";
+  this.size = size;
   this.cost = 0;
 }
 
@@ -88,6 +86,27 @@ MakeYourOwnPizza.prototype.addToppings = function(topping) {
   } 
 }
 
+
+let pizza1 = new MakeYourOwnPizza();
+
+
+$(document).ready(function() {
+  // attachContactListeners();
+  $("form#pizza-order").submit(function(event) {
+    event.preventDefault();
+    
+    const inputtedPizzaSize = $("input:radio[name=size]:checked").val();
+    let inputtedToppings = []
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      inputtedToppings.push($(this).val());
+    });
+    let newPizza = new MakeYourOwnPizza(inputtedToppings, inputtedPizzaSize);
+
+    
+
+  });
+});
+
 // function attachContactListeners() {
 //   $("input[type='checkbox']").on("click", function() {
 //     pizza1.toppings.push($("input:checkbox[name=toppings]:checked").val())
@@ -95,24 +114,6 @@ MakeYourOwnPizza.prototype.addToppings = function(topping) {
 //     console.log("work?");
 //   });
 // }
-
-let inputtedToppings = $("input:checkbox[name=toppings]:checked").val();
-
-$(document).ready(function() {
-  // attachContactListeners();
-  $("form#pizza-order").submit(function(event) {
-    event.preventDefault();
-    let newPizza = new MakeYourOwnPizza();
-    const inputtedPizzaSize = $("input:radio[name=size]:checked").val();
-    const inputtedToppings = []
-    $("input:checkbox[name=toppings]:checked").each(function() {
-      inputtedToppings.push($(this).val());
-    });
-
-    
-
-  });
-});
 
 /* Objectives of website --
 1) Allow user to choose more than one topping + size
