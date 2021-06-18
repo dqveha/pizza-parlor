@@ -82,7 +82,7 @@ MakeYourOwnPizza.prototype.addToppings = function(topping) {
       this.cost += 2.00;
       break;
     case (20):
-      this.toppings.push("Gold flakes");
+      this.toppings.push("Gold Flakes");
       this.cost += 79.79;
       break;
   } 
@@ -112,4 +112,10 @@ $(document).ready(function() {
       //extra = 2.50
       this.cost += 2.50;
       break;
-3) Create prototype method to see cost of pizza depending on selections chosen (branching?) */
+3) Create prototype method to see cost of pizza depending on selections chosen (branching?) 
+
+
+Pick toppings -- pushes into array (UI)
+forEach the array with an if statement (if element = 1,2,3,4,5,6... then add this amount..)
+Then submit..
+*/
