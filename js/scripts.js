@@ -29,18 +29,27 @@ MakeYourOwnPizza.prototype.addSizeCost = function(size) {
   }
 }
 
-MakeYourOwnPizza.prototype.addToppings = function(topping) {
-  switch(topping) {
+let pizza1 = new MakeYourOwnPizza([1,2,3]);
+
+MakeYourOwnPizza.prototype.loopAddToppings = function() {
+  for (i = 0; i < this.toppings.length; i++) {
+    console.log(this.toppings[i]);
+    console.log(pizza1)
+  };
+}
+
+MakeYourOwnPizza.prototype.addToppings = function()  {
+  switch (this.toppings) {
     case (1):
-      this.toppings.push("Pineapple");
+      // this.toppings.push("Pineapple");
       this.cost += 1.00;
       break;
     case (2):
-      this.toppings.push("Mushrooms");
+      // this.toppings.push("Mushrooms");
       this.cost += 1.00;
       break;
     case (3):
-      this.toppings.push("Artichoke Hearts");
+      // this.toppings.push("Artichoke Hearts");
       this.cost += 1.00;
       break;
     case (4):
@@ -84,10 +93,12 @@ MakeYourOwnPizza.prototype.addToppings = function(topping) {
       this.cost += 79.79;
       break;
   } 
-}
+};
 
-
-let pizza1 = new MakeYourOwnPizza();
+const inputtedToppings = []
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      inputtedToppings.push($(this).val());
+    });
 
 
 $(document).ready(function() {
@@ -96,16 +107,23 @@ $(document).ready(function() {
     event.preventDefault();
     
     const inputtedPizzaSize = $("input:radio[name=size]:checked").val();
-    let inputtedToppings = []
+    const inputtedToppings = []
     $("input:checkbox[name=toppings]:checked").each(function() {
       inputtedToppings.push($(this).val());
     });
     let newPizza = new MakeYourOwnPizza(inputtedToppings, inputtedPizzaSize);
+    newPizza.addSizeCost(newPizza.size);
+
+   
+    console.log(newPizza);
 
     
 
   });
 });
+
+// pizza1.toppings.forEach(function(element) {
+//   console.log(element);});
 
 // function attachContactListeners() {
 //   $("input[type='checkbox']").on("click", function() {
@@ -115,30 +133,29 @@ $(document).ready(function() {
 //   });
 // }
 
-/* Objectives of website --
-1) Allow user to choose more than one topping + size
-  Size: Bicycle (Small), Coupe (Medium), Sedan (Large), Van (XL)
-    Small Pizza: 8-10 inches with 6 slices.
-    Medium Pizza: 12 inches with 8 slices.
-    Large Pizza: 14 inch with 10 slices.
-    Extra-large Pizza: 16-18 inch with 12 slices.
-2) Create a pizza object constructor with props for toppings and size
-    case (97):
-      //extra = .50 for certain types of toppings
-      this.cost += 0.50;
-      break;
-    case (98):
-      //extra = 1.50 
-      this.cost += 1.50;
-      break;
-    case (99):
-      //extra = 2.50
-      this.cost += 2.50;
-      break;
-3) Create prototype method to see cost of pizza depending on selections chosen (branching?) 
+// /* Objectives of website --
+// 1) Allow user to choose more than one topping + size
+//   Size: Bicycle (Small), Coupe (Medium), Sedan (Large), Van (XL)
+//     Small Pizza: 8-10 inches with 6 slices.
+//     Medium Pizza: 12 inches with 8 slices.
+//     Large Pizza: 14 inch with 10 slices.
+//     Extra-large Pizza: 16-18 inch with 12 slices.
+// 2) Create a pizza object constructor with props for toppings and size
+//     case (97):
+//       //extra = .50 for certain types of toppings
+//       this.cost += 0.50;
+//       break;
+//     case (98):
+//       //extra = 1.50 
+//       this.cost += 1.50;
+//       break;
+//     case (99):
+//       //extra = 2.50
+//       this.cost += 2.50;
+//       break;
+// 3) Create prototype method to see cost of pizza depending on selections chosen (branching?) 
 
 
-Pick toppings -- pushes into array (UI)
-forEach the array with an if statement (if element = 1,2,3,4,5,6... then add this amount..)
-Then submit..
-*/
+// Pick toppings -- pushes into array (UI)
+// forEach the array with an if statement (if element = 1,2,3,4,5,6... then add this amount..)
+// Then submit..
