@@ -11,118 +11,160 @@
   <title>At The Drive-Thru Pizza Parlor</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container mt-5">
     <form id="pizza-order">
-    <div class="row">
-      <div class="col-4">
-        <div class="form-check">
-          <input class="form-check-input" value="bicycle" type="radio" name="size" id="small-pizza">
-          <label class="form-check-label" for="small-pizza">
-            Bicycle (Small)
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" value="coupe" type="radio" name="size"  id="medium-pizza">
-          <label class="form-check-label" for="medium-pizza">
-            Coupe (Medium)
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" value="sedan" type="radio" name="size"  id="large-pizza">
-          <label class="form-check-label" for="large-pizza">
-            Sedan (Large)
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" value="van" type="radio" name="size"  id="x-large-pizza">
-          <label class="form-check-label" for="x-large-pizza">
-            Van (X-Large)
-          </label>
+      <div class="container"></div>
+      <div class="row">
+        <div class="col-6">
+        <h1 class="text-center">ORDER HERE</h1>
+        <hr>
+        <div class="row">
+          <div class="col-6">
+            <h2 class="text-center">Pizza Sizes</h2>
+            <hr>
+            <div class="form-check">
+              <input class="form-check-input" value="bicycle" type="radio" name="size" id="small-pizza">
+              <label class="form-check-label" for="small-pizza">
+                Small "Bicycle" Pizza<br>$6.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" value="coupe" type="radio" name="size"  id="medium-pizza">
+              <label class="form-check-label" for="medium-pizza">
+                Medium "Coupe" Pizza<br>$8.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" value="sedan" type="radio" name="size"  id="large-pizza">
+              <label class="form-check-label" for="large-pizza">
+                Large "Sedan" Pizza<br>$10.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" value="van" type="radio" name="size"  id="x-large-pizza">
+              <label class="form-check-label" for="x-large-pizza">
+                X-Large "Van" Pizza<br>$12.00
+              </label>
+              
+            </div>
+            
+          </div>
+          <div class="col-6">
+            <h2 class="text-center">Toppings</h2>
+            <hr>
+            <h4 class="text-center">Vegetables</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="1" id="pineapple-topping">
+              <label class="form-check-label" for="pineapple-topping">
+                Pineapple $1.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="2" id="mushroom-topping">
+              <label class="form-check-label" for="mushroom-topping">
+                Mushrooms $1.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="3" id="artichoke-topping">
+              <label class="form-check-label" for="artichoke-topping">
+                Artichoke Hearts $1.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="4" id="red-onion-topping">
+              <label class="form-check-label" for="red-onion-topping">
+                Red Onion $1.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="5" id="black-olives-topping">
+              <label class="form-check-label" for="black-olives-topping">
+                Black Olives $1.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="6" id="garlic-topping">
+              <label class="form-check-label" for="garlic-topping">
+                Garlic $1.00
+              </label>
+            </div>
+            <h4 class="text-center mt-3">Meat</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="10" id="sausage-topping">
+              <label class="form-check-label" for="sausage-topping">
+                Sausage $2.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="11" id="bacon-topping">
+              <label class="form-check-label" for="bacon-topping">
+                Bacon $2.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="12" id="prosciutto-topping">
+              <label class="form-check-label" for="prosciutto-topping">
+                Prosciutto $2.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="13" id="pepperoni-topping">
+              <label class="form-check-label" for="pepperoni-topping">
+                Pepperoni $2.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="14" id="honey-ham-topping">
+              <label class="form-check-label" for="honey-ham-topping">
+                Honey Baked Ham $2.00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="15" id="ground-beef-topping">
+              <label class="form-check-label" for="ground-beef-topping">
+                Ground Beef $2.00
+              </label>
+            </div>
+            <h4 class="text-center mt-3">Fancy Cereal</h4>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="toppings" value="20" id="gold-topping">
+              <label class="form-check-label" for="gold-topping">
+                Gold Flakes $79.79
+              </label>
+            </div>
         </div>
       </div>
-      <div class="col-4">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="1" id="pineapple-topping">
-          <label class="form-check-label" for="pineapple-topping">
-            Pineapple
-          </label>
+      
+    
+      
+    </div>
+    
+    <div class="col-6">
+      <div class="container">
+      <div class="row">
+        <div class="col align-self-start">
+          <h1>"At The Drive-Thru Pizza"</h1>
+          <hr>
+          <p>History: Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas distinctio ab cumque voluptate molestias, eos rem fugiat, dicta dolorum vitae sint modi quis ipsa eaque error est et esse sed!
+          </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolores iste accusantium perferendis, laboriosam distinctio laudantium maiores deserunt vel! Vitae, velit qui? Itaque id quisquam hic explicabo cumque quibusdam totam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam minima distinctio tempora exercitationem velit tenetur nihil expedita temporibus officiis dolorem explicabo sapiente molestiae, aspernatur placeat reprehenderit voluptas quasi quibusdam. Veniam.</p>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="2" id="mushroom-topping">
-          <label class="form-check-label" for="mushroom-topping">
-            Mushrooms
-          </label>
+        <div class="w-100"></div>
+        <div class="col align-self-center">
+          <h3>Total Cost: <span id="total-pizza-cost"></span></h3>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="3" id="artichoke-topping">
-          <label class="form-check-label" for="artichoke-topping">
-            Artichoke Hearts
-          </label>
+        <div class="w-100"></div>
+        <div class="row align-self-end">
+          <button type="Order" class="btn btn-primary mt-auto">Submit</button>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="4" id="red-onion-topping">
-          <label class="form-check-label" for="red-onion-topping">
-            Red Onion
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="5" id="black-olives-topping">
-          <label class="form-check-label" for="black-olives-topping">
-            Black Olives
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="6" id="garlic-topping">
-          <label class="form-check-label" for="garlic-topping">
-            Garlic
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="10" id="sausage-topping">
-          <label class="form-check-label" for="sausage-topping">
-            Sausage
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="11" id="bacon-topping">
-          <label class="form-check-label" for="bacon-topping">
-            Bacon
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="12" id="prosciutto-topping">
-          <label class="form-check-label" for="prosciutto-topping">
-            Prosciutto
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="13" id="">
-          <label class="form-check-label" for="">
-            Pepperoni
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="14" id="honey-ham-topping">
-          <label class="form-check-label" for="honey-ham-topping">
-            Honey Baked Ham
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="15" id="ground-beef-topping">
-          <label class="form-check-label" for="ground-beef-topping">
-            Ground Beef
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="toppings" value="20" id="gold-topping">
-          <label class="form-check-label" for="gold-topping">
-            Gold Flakes
-          </label>
-        </div>
+      </div>
+    </div>
     </div>
     
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+ 
 </form>
 
     </div>
