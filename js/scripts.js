@@ -33,63 +33,30 @@ let pizza1 = new MakeYourOwnPizza([1,2,3]);
 
 MakeYourOwnPizza.prototype.loopAddToppings = function() {
   for (i = 0; i < this.toppings.length; i++) {
-    console.log(this.toppings[i]);
-    console.log(pizza1)
+    let individualTopping = this.toppings[i];
+    this.addToppings(individualTopping);
   };
 }
 
-MakeYourOwnPizza.prototype.addToppings = function()  {
-  switch (this.toppings) {
+MakeYourOwnPizza.prototype.addToppings = function(topping)  {
+  switch (topping) {
     case (1):
-      // this.toppings.push("Pineapple");
-      this.cost += 1.00;
-      break;
     case (2):
-      // this.toppings.push("Mushrooms");
-      this.cost += 1.00;
-      break;
     case (3):
-      // this.toppings.push("Artichoke Hearts");
-      this.cost += 1.00;
-      break;
     case (4):
-      this.toppings.push("Red Onion");
-      this.cost += 1.00;
-      break;
     case (5):
-      this.toppings.push("Black Olives");
-      this.cost += 1.00;
-      break;
     case (6):
-      this.toppings.push("Garlic");
       this.cost += 1.00;
       break;
     case (10):
-      this.toppings.push("Sausage");
-      this.cost += 2.00;
-      break;
     case (11):
-      this.toppings.push("Bacon");
-      this.cost += 2.00;
-      break;
     case (12):
-      this.toppings.push("Prosciutto");
-      this.cost += 2.00;
-      break;
     case (13):
-      this.toppings.push("Pepperoni");
-      this.cost += 2.00;
-      break;
     case (14):
-      this.toppings.push("Honey Baked Ham");
-      this.cost += 2.00;
-      break;
     case (15):
-      this.toppings.push("Ground Beef");
       this.cost += 2.00;
       break;
     case (20):
-      this.toppings.push("Gold Flakes");
       this.cost += 79.79;
       break;
   } 
@@ -102,23 +69,17 @@ const inputtedToppings = []
 
 
 $(document).ready(function() {
-  // attachContactListeners();
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
-    
     const inputtedPizzaSize = $("input:radio[name=size]:checked").val();
     const inputtedToppings = []
     $("input:checkbox[name=toppings]:checked").each(function() {
-      inputtedToppings.push($(this).val());
+      inputtedToppings.push(parseInt($(this).val()));
     });
     let newPizza = new MakeYourOwnPizza(inputtedToppings, inputtedPizzaSize);
     newPizza.addSizeCost(newPizza.size);
-
-   
+    newPizza.loopAddToppings();
     console.log(newPizza);
-
-    
-
   });
 });
 
