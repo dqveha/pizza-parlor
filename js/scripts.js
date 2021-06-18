@@ -91,11 +91,6 @@ MakeYourOwnPizza.prototype.addToppings = function (topping) {
   }
 };
 
-const inputtedToppings = [];
-$("input:checkbox[name=toppings]:checked").each(function () {
-  inputtedToppings.push($(this).val());
-});
-
 $(document).ready(function () {
   $("form#pizza-order").submit(function (event) {
     event.preventDefault();
