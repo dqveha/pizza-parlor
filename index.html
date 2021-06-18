@@ -12,28 +12,29 @@
 </head>
 <body>
   <div class="container">
+    <form id="pizza-order">
     <div class="row">
       <div class="col-4">
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="pizza-size" id="small-pizza">
+          <input class="form-check-input" value="bicycle" type="radio" name="size" id="small-pizza">
           <label class="form-check-label" for="small-pizza">
             Bicycle (Small)
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="pizza-size"  id="medium-pizza">
+          <input class="form-check-input" value="coupe" type="radio" name="size"  id="medium-pizza">
           <label class="form-check-label" for="medium-pizza">
             Coupe (Medium)
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="pizza-size"  id="large-pizza">
+          <input class="form-check-input" value="sedan" type="radio" name="size"  id="large-pizza">
           <label class="form-check-label" for="large-pizza">
             Sedan (Large)
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="pizza-size"  id="x-large-pizza">
+          <input class="form-check-input" value="van" type="radio" name="size"  id="x-large-pizza">
           <label class="form-check-label" for="x-large-pizza">
             Van (X-Large)
           </label>
@@ -119,7 +120,10 @@
           </label>
         </div>
     </div>
+    
   </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
     </div>
   </div>

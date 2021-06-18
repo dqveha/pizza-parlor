@@ -1,6 +1,6 @@
 
 let pizza1 = new MakeYourOwnPizza();
-function MakeYourOwnPizza(size) {
+function MakeYourOwnPizza() {
   this.toppings = [];
   this.extra = [];
   this.size = "";
@@ -88,15 +88,30 @@ MakeYourOwnPizza.prototype.addToppings = function(topping) {
   } 
 }
 
-function attachContactListeners() {
-  $("input[type='checkbox']").on("click", function() {
-    pizza1.toppings.push($("input:checkbox[name=toppings]:checked").val())
-    console.log("work?");
-  });
-}
+// function attachContactListeners() {
+//   $("input[type='checkbox']").on("click", function() {
+//     pizza1.toppings.push($("input:checkbox[name=toppings]:checked").val())
+//     // pizza1.toppings.push($("input:checkbox[name=toppings]:unchecked").val())
+//     console.log("work?");
+//   });
+// }
+
+let inputtedToppings = $("input:checkbox[name=toppings]:checked").val();
 
 $(document).ready(function() {
-  attachContactListeners();
+  // attachContactListeners();
+  $("form#pizza-order").submit(function(event) {
+    event.preventDefault();
+    let newPizza = new MakeYourOwnPizza();
+    const inputtedPizzaSize = $("input:radio[name=size]:checked").val();
+    const inputtedToppings = []
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      inputtedToppings.push($(this).val());
+    });
+
+    
+
+  });
 });
 
 /* Objectives of website --
